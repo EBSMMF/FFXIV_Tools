@@ -270,9 +270,7 @@
                     <Conditions />
                   </Action>
                   <Action OrderNumber="15" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ad68425f-213f-4233-8e6f-fdfcb5c16d62" TriggerForce="regexp,refire" ActionType="Trigger" ExecutionDelayExpression="1500">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="300" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                    </Condition>
+                    <Condition Enabled="false" Grouping="And" />
                     <Conditions />
                   </Action>
                 </Actions>
