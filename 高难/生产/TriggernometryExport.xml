@@ -535,7 +535,7 @@
             </Actions>
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${CasterName}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-              <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+              <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供" ExpressionTypeR="String" ConditionType="RegexMatch" />
             </Condition>
             <Conditions />
           </Trigger>
