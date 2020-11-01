@@ -533,18 +533,9 @@
                 <Conditions />
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="Or">
+            <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${CasterName}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-              <ConditionGroup Enabled="true" Grouping="Or">
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供暖炉" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供吊灯" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供浴缸" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供外套" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供衣柜" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供壁纸" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供常备药" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供菜肴" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-              </ConditionGroup>
+              <ConditionSingle Enabled="true" ExpressionL="${items}" ExpressionTypeL="String" ExpressionR="第二期重建用的特供" ExpressionTypeR="String" ConditionType="RegexMatch" />
             </Condition>
           </Trigger>
           <Trigger Enabled="true" Name="1.专心加工" Id="28df7b55-2f98-4ac2-b913-9f1313a93dc0" RegularExpression="^.{15}00:0842:(?&lt;CasterName&gt;[^:]+?)发动“专心加工”  ⇒ (?&lt;status&gt;.*?)$">
