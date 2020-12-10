@@ -216,15 +216,11 @@
           <Trigger Enabled="true" Name="3.收尾" Id="e8b61050-baa9-4c3b-a89a-2921aa34ce93" RegularExpression="">
             <Actions>
               <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/ac 精修" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="88" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                </Condition>
+                <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/ac 俭约" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
-                <Condition Enabled="true" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="56" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                </Condition>
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/ac 俭约" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
               <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${_env[PostNamazu]}/command" JsonPayloadExpression="/ac 高速制作" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="1500">
