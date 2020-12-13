@@ -498,7 +498,7 @@
               </Trigger>
               <Trigger Enabled="true" Name="掌握" Id="ac763d38-2145-4580-9d1e-59b71a5de235" RegularExpression="^.{15}15:.{8}:(?&lt;CasterName&gt;[^:]+?):11E5:">
                 <Actions>
-                  <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="dur" VariableExpression="max(${var:dur}+40,60)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                  <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="dur" VariableExpression="min(${var:dur}+40,60)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
