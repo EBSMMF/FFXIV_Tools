@@ -144,28 +144,32 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="11dur" Id="c2a0c0d4-a43c-4322-91ba-d7e07082f998" RegularExpression="">
                     <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1c057403-cf6b-4fe8-977f-d5c1e9e16fc5" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="f7e36172-313d-4840-b50b-9f5b823b1ef3" TriggerForce="regexp" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="36" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                          </ConditionGroup>
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="36" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                            <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                          </ConditionGroup>
+                          <ConditionGroup Enabled="true" Grouping="And">
+                            <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="36" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                          </ConditionGroup>
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1c057403-cf6b-4fe8-977f-d5c1e9e16fc5" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="36" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                         </Condition>
-                        <Conditions />
-                      </Action>
-                      <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="f7e36172-313d-4840-b50b-9f5b823b1ef3" TriggerForce="regexp" ActionType="Trigger">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionGroup Enabled="true" Grouping="Not">
-                            <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="36" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                            <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-                          </ConditionGroup>
-                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="32" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                        </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="e8b61050-baa9-4c3b-a89a-2921aa34ce93" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="32" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                         </Condition>
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -373,7 +377,24 @@
           </Trigger>
           <Trigger Enabled="true" Name="3.收尾" Id="8edb1069-7e3e-4462-bfec-9bd35e662f07" RegularExpression="">
             <Actions>
-              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="e8b61050-baa9-4c3b-a89a-2921aa34ce93" TriggerForce="regexp" ActionType="Trigger">
+              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="df1fb827-7822-4441-a4ea-806ddf57ab80" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="b52faeb7-6ac0-4492-9581-59f17f463062" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="21" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c2a0c0d4-a43c-4322-91ba-d7e07082f998" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="21" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="e8b61050-baa9-4c3b-a89a-2921aa34ce93" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionGroup Enabled="true" Grouping="Or">
                     <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentcp}" ExpressionTypeL="Numeric" ExpressionR="18" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
@@ -383,27 +404,6 @@
                     <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                   </ConditionGroup>
                 </Condition>
-                <Conditions />
-              </Action>
-              <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="df1fb827-7822-4441-a4ea-806ddf57ab80" TriggerForce="regexp" ActionType="Trigger">
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                </Condition>
-                <Conditions />
-              </Action>
-              <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="b52faeb7-6ac0-4492-9581-59f17f463062" TriggerForce="regexp" ActionType="Trigger">
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="21" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="31" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                </Condition>
-                <Conditions />
-              </Action>
-              <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c2a0c0d4-a43c-4322-91ba-d7e07082f998" TriggerForce="regexp" ActionType="Trigger">
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-                  <ConditionSingle Enabled="true" ExpressionL="${var:dur}" ExpressionTypeL="Numeric" ExpressionR="21" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                </Condition>
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -427,7 +427,6 @@
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="dur" VariableExpression="min(${var:dur}+40,60)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
