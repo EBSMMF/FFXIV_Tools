@@ -65,11 +65,11 @@
         <Triggers>
           <Trigger Enabled="true" Name="强心剂" Id="156519b4-dcd8-4572-abbb-6395149aaa23" RegularExpression="">
             <Actions>
-              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="[" KeyPressCode="56" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="56" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9f17bded-b7cc-4a2a-ada3-931f9771de9b" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="400">
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="400">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -79,15 +79,15 @@
           </Trigger>
           <Trigger Enabled="false" Name="料理" Id="930aec8e-d157-4239-aee6-23fb1d5014fc" RegularExpression="^.{15}1E:.{8}:(?&lt;CasterName&gt;[^:]+?) loses the effect of 进食">
             <Actions>
-              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 中断" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 中断" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="[" KeyPressCode="57" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1500">
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="57" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1500">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ff1a2832-0167-450c-84b9-3a9c7dda8dfe" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1500">
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ff1a2832-0167-450c-84b9-3a9c7dda8dfe" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1500">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -141,14 +141,14 @@
             <Triggers>
               <Trigger Enabled="true" Name="成功钓上了" Id="72f7fbd3-8b4e-4f5e-9d24-baf7781a085e" RegularExpression="^.{15}00:0843:(?&lt;CasterName&gt;[^:]+?)(成功钓上了|捕到了)(?&lt;what&gt;.*?)。">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 专一垂钓" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="600">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 专一垂钓" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="600">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentgp}" ExpressionTypeL="Numeric" ExpressionR="350" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${what}" ExpressionTypeL="String" ExpressionR="特供飞蝠鲼" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 拍击水面" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
+                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 拍击水面" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentgp}" ExpressionTypeL="Numeric" ExpressionR="350" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${what}" ExpressionTypeL="String" ExpressionR="皇家披风" ExpressionTypeR="String" ConditionType="RegexMatch" />
@@ -163,7 +163,7 @@
               </Trigger>
               <Trigger Enabled="true" Name="上钩" Id="0828f574-dc21-40e8-a0f1-12986db905cc" RegularExpression="^.{15}00:0000:.+FishBite:{&quot;type&quot;:(?&lt;type&gt;.*?)}">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 提钩" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionGroup Enabled="true" Grouping="And">
@@ -179,11 +179,11 @@
               </Trigger>
               <Trigger Enabled="true" Name="专一垂钓" Id="a5256ab6-392d-4257-aa94-1f0d2831bfc5" RegularExpression="^.{15}1A:.{8}:(?&lt;CasterName&gt;[^:]+?) gains the effect of (专一垂钓|拍击水面)">
                 <Actions>
-                  <Action OrderNumber="1" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="bfae713a-3ac3-4d09-b00f-33e0aabefaa1" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="bfae713a-3ac3-4d09-b00f-33e0aabefaa1" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="0828f574-dc21-40e8-a0f1-12986db905cc" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="0828f574-dc21-40e8-a0f1-12986db905cc" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -195,24 +195,24 @@
               </Trigger>
               <Trigger Enabled="false" Name="DH" Id="bfae713a-3ac3-4d09-b00f-33e0aabefaa1" RegularExpression="^.{15}00:0000:.+FishBite:{&quot;type&quot;:2}">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 双重提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 双重提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentgp}" ExpressionTypeL="Numeric" ExpressionR="350" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:FT}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="50">
+                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="50">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:FT}" ExpressionTypeL="Numeric" ExpressionR="20" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="3" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="0828f574-dc21-40e8-a0f1-12986db905cc" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="0828f574-dc21-40e8-a0f1-12986db905cc" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="4" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="bfae713a-3ac3-4d09-b00f-33e0aabefaa1" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="bfae713a-3ac3-4d09-b00f-33e0aabefaa1" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -229,19 +229,19 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="耐心:关闭" Id="3d7d3efb-ce2b-4e72-bd10-8bfd355918cc" RegularExpression="^.{15}1A:.{8}:(?&lt;CasterName&gt;[^:]+?) gains the effect of 提钩成功率降低">
                     <Actions>
-                      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="c0636ebd-36f4-46d8-b4c0-755ee39ae363" ActionType="Trigger">
+                      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="c0636ebd-36f4-46d8-b4c0-755ee39ae363" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="3d7d3efb-ce2b-4e72-bd10-8bfd355918cc" ActionType="Trigger">
+                      <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="3d7d3efb-ce2b-4e72-bd10-8bfd355918cc" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger" ExecutionDelayExpression="100">
+                      <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger" ExecutionDelayExpression="100">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger">
+                      <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
@@ -253,19 +253,19 @@
                   </Trigger>
                   <Trigger Enabled="false" Name="耐心:开启" Id="c0636ebd-36f4-46d8-b4c0-755ee39ae363" RegularExpression="^.{15}1E:.{8}:(?&lt;CasterName&gt;[^:]+?) loses the effect of 提钩成功率降低">
                     <Actions>
-                      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="3d7d3efb-ce2b-4e72-bd10-8bfd355918cc" ActionType="Trigger">
+                      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="3d7d3efb-ce2b-4e72-bd10-8bfd355918cc" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="c0636ebd-36f4-46d8-b4c0-755ee39ae363" ActionType="Trigger">
+                      <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿"  TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="c0636ebd-36f4-46d8-b4c0-755ee39ae363" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger" ExecutionDelayExpression="700">
+                      <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿"  TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger" ExecutionDelayExpression="700">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 耐心II" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
+                      <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 耐心II" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
@@ -277,7 +277,7 @@
                   </Trigger>
                   <Trigger Enabled="true" Name="以小钓大" Id="736e68a3-b87a-47a8-a349-d07c88bffd22" RegularExpression="^.{15}00:0843:以小钓大的机会！">
                     <Actions>
-                      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 以小钓大" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
+                      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 以小钓大"  TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:以小钓大}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="NumericEqual" />
                         </Condition>
@@ -322,11 +322,11 @@
             <Triggers>
               <Trigger Enabled="true" Name="上钩" Id="310288d5-e933-4467-94ea-fe58bebc8845" RegularExpression="^.{15}00:0000:.+FishBite:{&quot;type&quot;:1}">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 精准提钩" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 精准提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 提钩" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
+                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -336,11 +336,11 @@
               </Trigger>
               <Trigger Enabled="false" Name="上钩" Id="490652e4-4497-4392-9723-6b793f114130" RegularExpression="^.{15}00:0000:.+FishBite:{&quot;type&quot;:(2|3)}">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 强力提钩" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 强力提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="300">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 提钩" KeyPressExpression="//hotbar set" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
+                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 提钩" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -397,7 +397,7 @@
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
+                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿"  TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -407,7 +407,7 @@
               </Trigger>
               <Trigger Enabled="true" Name="收回了鱼线" Id="82e4175a-b634-411b-88d4-f532afeb67fd" RegularExpression=".{15}00:08c3:(?&lt;CasterName&gt;[^:]+?)收回了鱼线。">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" PlaySpeechMyself="True" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" PlaySpeechMyself="True" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -419,7 +419,7 @@
               </Trigger>
               <Trigger Enabled="true" Name="上钩2" Id="d7f99c0a-1448-4611-ac34-d595a12f39ec" RegularExpression=".{15}00:08c3:(没有钓到任何东西|将上钩的+[^\x00-\xff]+放回到了钓场中|不经意间鱼饵被吃掉了|不经意间鱼饵丢掉了.+|上钩的鱼逃走了……|鱼线断了！)">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -429,7 +429,7 @@
               </Trigger>
               <Trigger Enabled="true" Name="上钩1" Id="5f0b3d7f-3ba7-49df-922b-5861a8fb4c4b" RegularExpression=".{15}00:0843:(?&lt;CasterName&gt;[^:]+?)(成功钓上了|捕到了).+">
                 <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019}/command" JsonPayloadExpression="/ac 抛竿" KeyPressExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
