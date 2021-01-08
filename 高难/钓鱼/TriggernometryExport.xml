@@ -183,18 +183,18 @@
             <Triggers>
               <Trigger Enabled="true" Name="成功提钩" Id="72f7fbd3-8b4e-4f5e-9d24-baf7781a085e" RegularExpression="^.{15}00:0843:(?&lt;CasterName&gt;[^:]+?)(成功钓上了|捕到了)(?&lt;what&gt;.*?)。">
                 <Actions>
-                  <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger" ExecutionDelayExpression="400">
+                  <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonCacheRequest="True" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 专一垂钓" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="200">
+                  <Action OrderNumber="2" JsonCacheRequest="True" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 专一垂钓" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentgp}" ExpressionTypeL="Numeric" ExpressionR="350" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${what}" ExpressionTypeL="String" ExpressionR="特供" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 拍击水面" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="100">
+                  <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 拍击水面" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="50">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentgp}" ExpressionTypeL="Numeric" ExpressionR="150" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${what}" ExpressionTypeL="String" ExpressionR="皇家披风" ExpressionTypeR="String" ConditionType="RegexMatch" />
