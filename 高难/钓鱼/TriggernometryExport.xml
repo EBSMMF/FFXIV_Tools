@@ -69,12 +69,15 @@
             <Actions>
               <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 中断" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
-              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="57" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1500">
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="57" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="3000">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
-              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ff1a2832-0167-450c-84b9-3a9c7dda8dfe" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1500">
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1500">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
@@ -123,11 +126,9 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="bfae713a-3ac3-4d09-b00f-33e0aabefaa1" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="0828f574-dc21-40e8-a0f1-12986db905cc" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
@@ -138,11 +139,9 @@
                     <Actions>
                       <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="bfae713a-3ac3-4d09-b00f-33e0aabefaa1" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="0828f574-dc21-40e8-a0f1-12986db905cc" TriggerForce="regexp" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -185,25 +184,21 @@
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" ActionType="Trigger" ExecutionDelayExpression="200">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonCacheRequest="True" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 专一垂钓" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
+                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 专一垂钓" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="500">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentgp}" ExpressionTypeL="Numeric" ExpressionR="350" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${what}" ExpressionTypeL="String" ExpressionR="特供" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 拍击水面" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="50">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].currentgp}" ExpressionTypeL="Numeric" ExpressionR="150" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${what}" ExpressionTypeL="String" ExpressionR="皇家披风" ExpressionTypeR="String" ConditionType="RegexMatch" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a34fbc5f-825e-44ec-94e5-c112dc58bc52" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
@@ -431,6 +426,34 @@
             <Actions>
               <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="77" KeyPressWindow="最终幻想XIV" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
                 <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="警惕" Id="7f837ec8-fcff-49e8-b68c-571204c71ba7" RegularExpression=".{15}00:(0843|08c3):这里的鱼现在警惕性很高，看来还是换个地点比较好。">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="警惕" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="初始化" Id="0313b8cd-a298-4e53-82b7-4d2d145d4ec9" RegularExpression="^.{15}01:Changed Zone to 云冠群岛黄昏探索.">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="622635fa-433d-464c-b288-aff7d23453f7" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="3d7d3efb-ce2b-4e72-bd10-8bfd355918cc" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="c0636ebd-36f4-46d8-b4c0-755ee39ae363" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2019/command" JsonPayloadExpression="/ac 抛竿" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="e4914658-f063-4564-b6d0-d3850dc55a9b" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
             </Actions>
@@ -440,15 +463,6 @@
         </Triggers>
       </Folder>
     </Folders>
-    <Triggers>
-      <Trigger Enabled="true" Name="警惕" Id="7f837ec8-fcff-49e8-b68c-571204c71ba7" RegularExpression=".{15}00:(0843|08c3):这里的鱼现在警惕性很高，看来还是换个地点比较好。">
-        <Actions>
-          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="警惕" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-        </Actions>
-        <Condition Enabled="false" Grouping="Or" />
-      </Trigger>
-    </Triggers>
+    <Triggers />
   </ExportedFolder>
 </TriggernometryExport>
